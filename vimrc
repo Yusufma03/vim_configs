@@ -58,12 +58,12 @@ augroup vimrcEx
   autocmd FileType markdown setlocal spell
 
   " Automatically wrap at 80 characters for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+  autocmd BufRead,BufNewFile *.py setlocal textwidth=80
 augroup END
 
 " Softtabs, 2 spaces
 set tabstop=2
-set shiftwidth=2
+set shiftwidth=1
 set shiftround
 set expandtab
 
@@ -88,7 +88,7 @@ highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " Make it obvious where 80 characters is
-set textwidth=80
+" set textwidth=80
 set colorcolumn=+1
 
 " Numbers
@@ -191,7 +191,7 @@ nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " nnoremap <F2> :YcmCompleter GoToDeclaration<CR>
 
 " ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux"
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pkl,*.npy     " MacOSX/Linux"
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 set laststatus=2 " Always display the status line
@@ -228,4 +228,20 @@ autocmd!   BufNewFile,BufRead *    setlocal nofoldenable
 set encoding=utf-8
 set t_Co=256
 
-autocmd FileType python PyDocHide
+" autocmd FileType python PyDocHide
+
+" Quickly find and open a file in the CWD
+let g:ctrlp_map = '<C-p>'
+
+" Quickly find and open a recently opened file
+map <leader>f :MRU<CR>
+
+" Quickly find and open a buffer
+map <leader>b :CtrlPBuffer<cr>
+let g:ycm_enable_semantic_highlighting=1
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|experiment_output\|tmp\|npy\|pkl'
+
+set smartindent
+set tabstop=2
+set expandtab
+set shiftwidth=2

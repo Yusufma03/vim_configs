@@ -14,3 +14,10 @@ The next step is to compile ``YouCompleteMe``,
 $ cd .vim/bundle/YouCompleteMe/ && python install.py
 ```
 You will need ``cmake`` for compilation.
+
+In addition, the customized python indentation file should be setup as
+```
+$ mkdir ~/.vim/indent
+$ cp python.vim ~/.vim/indent/python.vim
+```
+

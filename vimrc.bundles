@@ -15,7 +15,6 @@ Bundle 'croaky/vim-colors-github'
 Bundle 'danro/rename.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
 Bundle 'pbrisbin/vim-mkdir'
 Bundle 'slim-template/vim-slim'
 Bundle 'thoughtbot/vim-rspec'
@@ -45,6 +44,8 @@ Bundle "tomasr/molokai"
 Bundle "yhat/vim-docstring"
 Bundle "tell-k/vim-autopep8"
 Bundle "joshdick/onedark.vim"
+Bundle "kien/ctrlp.vim"
+Bundle "junegunn/fzf.vim"
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
